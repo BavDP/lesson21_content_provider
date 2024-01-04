@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.NewPhoneFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_name"
+            style="@style/margins"
+            android:labelFor="@id/nameEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/nameEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="text"
+            android:autofillHints="username"
+            tools:text="name"
+            style="@style/margins"
+            app:layout_constraintTop_toBottomOf="@+id/nameTextView"
+            />
+
+        <TextView
+            android:id="@+id/phoneTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_phone"
+            style="@style/margins"
+            android:labelFor="@id/phoneEdit"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/nameEdit" />
+
+        <EditText
+            android:id="@+id/phoneEdit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="phone"
+            tools:text="phone"
+            android:autofillHints="phone"
+            style="@style/margins"
+            app:layout_constraintTop_toBottomOf="@+id/phoneTextView"
+            />
+
+        <Button
+            android:id="@+id/saveBtn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"
+            style="@style/margins"
+            app:layout_constraintTop_toBottomOf="@id/phoneEdit"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
